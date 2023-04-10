@@ -16,6 +16,12 @@ services:
       - '5555:5000'
     depends_on:
       - mysql
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: time_tb
     volumes:
       - /app/node_modules
       - ./api:/app
